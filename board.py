@@ -1,14 +1,17 @@
 import random
 
+
 def create_board(cols, rows):
     """Initialize board with dead cells."""
     board = [[0 for _ in range(cols)] for _ in range(rows)]
     return board
 
+
 def create_random_board(cols, rows):
     """Create a board with random living and dead cells."""
     board = [[random.randint(0, 1) for _ in range(cols)] for _ in range(rows)]
     return board
+
 
 def count_neighbours(row0, column0, board, states):
     """Count the number of living neighbours for a given cell."""
@@ -21,6 +24,7 @@ def count_neighbours(row0, column0, board, states):
                 if 0 <= row < len(board) and 0 <= column < len(board[row]):
                     neighbours[board[row][column]] += 1
     return neighbours
+
 
 def compute_next_board(states, current_board, next_board):
     """Compute the next state of the board based on the current state."""
