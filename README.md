@@ -7,9 +7,9 @@ Simple Python implementation of Conway's game of Life using Tkinter for GUI
 
 **Randomize** — creates and renders board randomly filled with dead and alive cells  
 
-**Simulate** — creates next iteration of a board every 100 ms  
+**Simulate** — creates next iteration of a board every 100 ms, if simulation is already running, then pressing button again will stop it. 
 
-**Clear** — clears the board  
+**Clear** — clears the board 
 
 
 
