@@ -1,5 +1,15 @@
+"""Modules providing GUI functionality and parsing json"""
 import tkinter as tk
+import json
+
 from gui import GameOfLifeGUI
+from board import Board
+
+COLS = 60
+ROWS = 60
+
+with open("automata/brianbrain.json", encoding="utf-8") as json_file:
+    automaton = json.load(json_file)
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -9,5 +19,6 @@ if __name__ == "__main__":
     root.title("Conway's game of life")
     canvas_width = screen_width / 1.6
     canvas_height = screen_height / 1.2
-    gui = GameOfLifeGUI(root, cols=60, rows=60, canvas_width=canvas_width, canvas_height=canvas_height)
+    board = Board(COLS, ROWS, automaton["Automata"])
+    gui = GameOfLifeGUI(root, COLS, ROWS, canvas_width, canvas_height, board)
     root.mainloop()

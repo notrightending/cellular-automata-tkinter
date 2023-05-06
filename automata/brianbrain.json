@@ -1,0 +1,24 @@
+{
+    "Automata": {
+        "transition": [
+            {
+                "026": 1,
+                "125": 1,
+                "224": 1,
+                "323": 1,
+                "422": 1,
+                "521": 1,
+                "620": 1,
+                "default": 0
+            },
+            {
+                "default": 2
+            },
+            {
+                "default": 0
+            }
+        ],
+        "state_color": ["white", "black", "blue"]
+    }
+}
+

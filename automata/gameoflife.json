@@ -1,0 +1,7 @@
+{
+    "Automata": {
+        "transition": [{"53": 1, "default": 0}, {"53": 1, "62": 1, "default": 0}],
+        "state_color": ["white", "black"]
+    }
+}
+
