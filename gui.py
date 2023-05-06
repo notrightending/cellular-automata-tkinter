@@ -1,5 +1,7 @@
 import tkinter as tk
 from board import create_board, create_random_board, compute_next_board
+import os
+from tkinter import filedialog
 
 
 class GameOfLifeGUI:
@@ -29,6 +31,10 @@ class GameOfLifeGUI:
         button_random = tk.Button(button_frame, text="Randomize", command=self.button_random_func)
         button_simulate = tk.Button(button_frame, text="Simulate", command=self.button_simulate_func)
         button_clear = tk.Button(button_frame, text="Clear", command=self.button_clear_func)
+        button_save = tk.Button(button_frame, text="Save", command=self.button_save_func)
+        button_load = tk.Button(button_frame, text="Load", command=self.button_load_func)
+        button_save.pack(side=tk.LEFT, anchor=tk.CENTER, padx=5)
+        button_load.pack(side=tk.LEFT, anchor=tk.CENTER, padx=5)
         button_next.pack(side=tk.LEFT, anchor=tk.CENTER, padx=5)
         button_random.pack(side=tk.LEFT, anchor=tk.CENTER, padx=5)
         button_simulate.pack(side=tk.LEFT, anchor=tk.CENTER, padx=5)
@@ -62,6 +68,28 @@ class GameOfLifeGUI:
         self.simulation_running = False
         self.current_board = create_board(self.cols, self.rows)
         self.render(self.current_board)
+
+    def button_save_func(self):
+        self.simulation_running = False
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".txt", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
+        )
+        if file_path:
+            with open(file_path, "w") as f:
+                for row in self.current_board:
+                    f.write(" ".join(str(cell) for cell in row) + "\n")
+
+    def button_load_func(self):
+        self.simulation_running = False
+        file_path = filedialog.askopenfilename(
+            defaultextension=".txt", filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
+        )
+        if file_path:
+            with open(file_path, "r") as f:
+                for i, row in enumerate(f.readlines()):
+                    for j, cell in enumerate(row.strip().split(" ")):
+                        self.current_board[i][j] = int(cell)
+                self.render(self.current_board)
 
     def render(self, board):
         self.canvas.delete("all")

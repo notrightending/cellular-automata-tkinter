@@ -11,7 +11,6 @@ Simple Python implementation of Conway's game of Life using Tkinter for GUI
 
 **Clear** — clears the board  
 
-**Stop** —  stops the simulation  
 
 
 
