@@ -1,6 +1,5 @@
 import tkinter as tk
 from board import create_board, create_random_board, compute_next_board
-import os
 from tkinter import filedialog
 
 
