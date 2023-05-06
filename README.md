@@ -1,7 +1,7 @@
 # Overiew
 Simple Python implementation of cellular automata using Tkinter for GUI
 
-Interface to upload/create automata is not implemented yet, but you can directly pass automata in a form of JSON file. Example can be found in "saves" directory.
+Interface to upload/create automata is not implemented yet, but you can directly pass automata in a form of JSON file. Example can be found in "automata" directory.
 
 **Left click on the cell** — changes state of a cell.
 
