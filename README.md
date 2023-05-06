@@ -25,6 +25,6 @@ python3 main.py
 
 ## To-Do
 
-- [ ] Implement customization (ex. setting up canvas size inside gui, creating custom states)
+- [ ] Implement minor features (ex. create custom cell states through GUI, save/load state of a board)
 - [x] Make initial window size and canvas size depend on a user's screen size
 - [x] Refactor code (its too messy rn)
