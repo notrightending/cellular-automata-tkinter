@@ -1,7 +1,13 @@
 # Overiew
 Simple Python implementation of Conway's game of Life using Tkinter for GUI
 
-**Left click on the cell** - changes state of a cell.
+**Left click on the cell** — changes state of a cell.
+
+**Save** —  saves current state of a board as .txt file.  
+
+**Load** — loads .txt file into a state of a board. 
+
+Repository comes with a few pre-saved interesting patterns which you can run.
 
 **Next step** — creates and renders next iteration of a board.
 
@@ -14,16 +20,12 @@ Simple Python implementation of Conway's game of Life using Tkinter for GUI
 
 
 
-![image](https://user-images.githubusercontent.com/117105291/236302979-1b5a1953-90e9-48e5-90af-32e7cac30acc.png)
+![image](https://user-images.githubusercontent.com/117105291/236598077-76a603cb-92e4-402f-a91c-7c7fe867be36.png)
+
+
 
 # Installation 
 To run you need to simply clone repo, and run in a directory using terminal:
 ```
 python3 main.py
 ```
-
-## To-Do
-
-- [ ] Implement minor features (ex. create custom cell states through GUI, save/load state of a board)
-- [x] Make initial window size and canvas size depend on a user's screen size
-- [x] Refactor code (its too messy rn)
