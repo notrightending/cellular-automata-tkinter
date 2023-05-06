@@ -1,5 +1,7 @@
 # Overiew
-Simple Python implementation of Conway's game of Life using Tkinter for GUI
+Simple Python implementation of cellular automata using Tkinter for GUI
+
+Interface to upload/create automata is not implemented yet, but you can directly pass automata in a form of JSON file. Example can be found in "saves" directory.
 
 **Left click on the cell** — changes state of a cell.
 
@@ -20,7 +22,7 @@ Repository comes with a few pre-saved interesting patterns which you can run.
 
 
 
-![image](https://user-images.githubusercontent.com/117105291/236598077-76a603cb-92e4-402f-a91c-7c7fe867be36.png)
+![image](https://user-images.githubusercontent.com/117105291/236638453-03b0b8bc-5e47-4a0f-aed3-c74695d11ebf.png)
 
 
 
