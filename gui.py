@@ -18,31 +18,36 @@ class GameOfLifeGUI:
         self.simulation_running = False
         self.current_color_index = 0
         self.rectangle_id_to_cell = {}
+        self.rectangle_ids = [[None for _ in range(self.cols)] for _ in range(self.rows)]
         self.initialize_gui()
 
     def render(self):
         """Renders the board"""
-        self.canvas.delete("all")
         for row in range(self.rows):
             for col in range(self.cols):
                 x = col * self.cell_width
                 y = row * self.cell_height
                 fill_color = self.board.automaton["state_color"][self.board.current_board[row][col]]
-                rectangle_id = self.canvas.create_rectangle(
-                    x,
-                    y,
-                    x + self.cell_width,
-                    y + self.cell_height,
-                    width=1,
-                    outline="gray",
-                    fill=fill_color,
-                )
-                self.rectangle_id_to_cell[rectangle_id] = (row, col)
-                self.canvas.tag_bind(
-                    rectangle_id,
-                    "<Button-1>",
-                    lambda e, rect_id=rectangle_id: self.on_rectangle_click(rect_id),
-                )
+                if self.rectangle_ids[row][col] is None:
+                    rectangle_id = self.canvas.create_rectangle(
+                        x,
+                        y,
+                        x + self.cell_width,
+                        y + self.cell_height,
+                        width=1,
+                        outline="gray",
+                        fill=fill_color,
+                    )
+                    self.rectangle_ids[row][col] = rectangle_id
+                    self.rectangle_id_to_cell[rectangle_id] = (row, col)
+                    self.canvas.tag_bind(
+                        rectangle_id,
+                        "<Button-1>",
+                        lambda e, rect_id=rectangle_id: self.on_rectangle_click(rect_id),
+                    )
+                else:
+                    rectangle_id = self.rectangle_ids[row][col]
+                    self.canvas.itemconfig(rectangle_id, fill=fill_color)
 
     def initialize_gui(self):
         """Initializes GUI"""
@@ -88,7 +93,7 @@ class GameOfLifeGUI:
         """Calls 'button_next_func' method continiously"""
         if self.simulation_running:
             self.button_next_func()
-            self.root.after(100, self.run_simulation)
+            self.root.after(10, self.run_simulation)
 
     def button_random_func(self):
         """Fills board with random states"""
