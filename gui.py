@@ -93,7 +93,7 @@ class GameOfLifeGUI:
         """Calls 'button_next_func' method continiously"""
         if self.simulation_running:
             self.button_next_func()
-            self.root.after(10, self.run_simulation)
+            self.root.after(100, self.run_simulation)
 
     def button_random_func(self):
         """Fills board with random states"""
