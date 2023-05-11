@@ -1,5 +1,4 @@
 {
-    "Automata": {
         "transition": [
             {
                 "026": 1,
@@ -19,6 +18,5 @@
             }
         ],
         "state_color": ["white", "black", "blue"]
-    }
 }
 
