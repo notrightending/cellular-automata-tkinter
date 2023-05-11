@@ -98,6 +98,7 @@ To install and run the cellular automata simulator, follow these steps:
    ```
    python main.py
    ```
+4. Press "Automata" and "Load automata", choose one of the existing automatas. 
 
 ## Contributing
 
