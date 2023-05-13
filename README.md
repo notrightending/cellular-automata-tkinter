@@ -7,14 +7,13 @@ This project is a cellular automata simulator built with Python and Tkinter. It 
 
 ## Features
 
-The application provides a simple and intuitive graphical user interface (GUI) for users to interact with cellular automata. The main window consists of a grid of cells, a toolbar with buttons to control the simulation, and a status bar displaying the current generation.
+The application provides a simple and intuitive graphical user interface (GUI) for users to interact with cellular automata.
 
 ### Toolbar Buttons
 
 The toolbar provides the following buttons to control the simulation:
 
 - **Next step**: Advances the simulation by one generation. This button is useful for observing the evolution of the cellular automata step-by-step.
-- **Randomize**: Fills the grid with random cell states, providing a starting point for exploring different patterns and behaviors.
 - **Randomize**: Fills the grid with random cell states, providing a starting point for exploring different patterns and behaviors.
 - **Simulate**: Starts the simulation and updates the grid according to the defined rules. If simulation is already running, pressing the button will stop it.
 - **Clear**: Clears the grid.
@@ -69,7 +68,7 @@ To create automata you need to press **Create Automata**, after this textbox wil
         "state_color": ["white", "black", "blue"]
 }
 ```
-4. Colors of the states are matched with corresponding state. For example ["transition"][0] will be automatically matched with a ["state_color"][0]
+4. Colors of the states are matched with corresponding state. For example cell with state "2" will be automatically matched with a ["state_color"][2]
 
 
 
