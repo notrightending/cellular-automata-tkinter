@@ -1,7 +1,7 @@
 
 # Cellular Automata Tkinter
 
-This project is a cellular automata simulator built with Python and Tkinter. It allows users to create, visualize, and interact with cellular automata in a grid-based environment. This README will guide you through the features and functionalities of the application.
+This project is a cellular automata simulator built with Python and Tkinter. It allows users to create, visualize, and interact with cellular automata in a grid-based environment. 
 
 ![image](https://github.com/NightPuppet/cellular-automata-tkinter/assets/117105291/450ab211-6aed-4b4a-a2b5-0481324fdd5d)
 
@@ -98,11 +98,6 @@ To install and run the cellular automata simulator, follow these steps:
    python main.py
    ```
 4. Press "Automata" and "Load automata", choose one of the existing automatas. 
-
-## Contributing
-
-Contributions to this project are welcome! Feel free to submit issues and pull requests on the GitHub repository.
-
 
 
 
